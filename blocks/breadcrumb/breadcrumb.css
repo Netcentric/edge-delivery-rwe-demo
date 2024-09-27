@@ -8,6 +8,11 @@
   font-family: rwe-light;
 }
 
+.breadcrumb a:hover,
+.breadcrumb a:active {
+  text-decoration: none;
+}
+
 .breadcrumb ul {
   list-style: none;
   padding: 0;
@@ -31,4 +36,8 @@
   background: #1d4477;
   color: var(--white);
   padding: 16px;
+}
+
+.breadcrumb.dark a:any-link {
+  color: var(--white);
 }

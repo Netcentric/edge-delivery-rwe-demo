@@ -1,5 +1,8 @@
 .carousel {
   padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .carousel .carousel-slides-container {

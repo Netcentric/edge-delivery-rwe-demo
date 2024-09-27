@@ -8,6 +8,8 @@
   height: 130px;
   padding: 0 32px;
   color: var(--white);
+  max-width: 1200px;
+  margin: auto;
 }
 
 .header .section {

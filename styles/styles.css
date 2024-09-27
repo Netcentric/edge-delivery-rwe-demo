@@ -341,13 +341,23 @@ span.icon-rwe-anchor-right::before {
 }
 
 span.icon-rwe-anchor-left::before {
-  content: ""
+  content: "";
 }
 
 span.icon-rwe-eye::before {
-  content: ""
+  content: "";
 }
 
 .video-block {
   width: 100%;
+}
+
+.top-line > :first-child::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #adafb1;
+  display: block;
+  margin-bottom: 16px;
+  margin-top: -16px;
 }

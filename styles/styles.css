@@ -277,15 +277,14 @@ main .section.highlight {
 main .section.background-grey {
   background: rgb(232 232 228);
   padding: 16px;
-  background-image: url("/images/loosefield2-p-800.png"),
-    url("/images/loosefield1-p-800.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 120% 0%, -20% 0;
-  background-size: contain, contain;
 }
 
 main .section.background-dark-blue {
   background: #1d4477;
+}
+
+main .section.long-button .default-content-wrapper a.button {
+  width: 100%;
 }
 
 p strong {
@@ -348,12 +347,16 @@ span.icon-rwe-eye::before {
   content: "";
 }
 
+span.icon-rwe-arrow-right::before {
+  content: "";
+}
+
 .video-block {
   width: 100%;
 }
 
 .top-line > :first-child::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 1px;
   background: #adafb1;

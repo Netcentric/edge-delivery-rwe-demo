@@ -18,7 +18,7 @@
 .cards > ul > li h1,
 .cards > ul > li h2,
 .cards > ul > li h3 {
-  font-family: rwe-medium;
+  font-family: rwe-medium, Arial, Helvetica, sans-serif;
 }
 
 .cards .cards-card-body {

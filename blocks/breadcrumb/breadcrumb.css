@@ -5,7 +5,7 @@
 
 .breadcrumb a:any-link {
   color: rgb(0 161 159);
-  font-family: rwe-light;
+  font-family: rwe-light, Arial, Helvetica, sans-serif;
 }
 
 .breadcrumb a:hover,

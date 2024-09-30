@@ -23,11 +23,11 @@
 .facts .facts-value {
   font-size: 24px;
   line-height: 28px;
-  font-family: rwe-bold;
+  font-family: rwe-bold, Arial, Helvetica, sans-serif;
   color: #00a19f;
 }
 
 .facts p {
   margin: 0;
-  font-family: rwe-medium;
+  font-family: rwe-medium, Arial, Helvetica, sans-serif;
 }

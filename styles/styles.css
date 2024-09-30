@@ -22,19 +22,6 @@
   --nav-height: 130px;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: rwe-bold;
-  size-adjust: 88.82%;
-  src: local("Arial");
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local("Arial");
-}
-
 * {
   box-sizing: border-box;
 }
@@ -70,7 +57,7 @@ footer .footer[data-block-status="loaded"] {
 h1,
 h2,
 h3 {
-  font-family: rwe-bold, sans-serif;
+  font-family: rwe-bold, Arial, Helvetica, sans-serif;;
   font-weight: 400;
   width: 100%;
   margin-top: 0;
@@ -288,7 +275,7 @@ main .section.long-button .default-content-wrapper a.button {
 }
 
 p strong {
-  font-family: rwe-bold;
+  font-family: rwe-bold, Arial, Helvetica, sans-serif;
 }
 
 .section.text-center .default-content-wrapper {

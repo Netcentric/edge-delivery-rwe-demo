@@ -9,7 +9,7 @@
 .press-releases .press-releases-heading a {
   font-size: 15px;
   line-height: 22px;
-  font-family: rwe-medium, Arial, Helvetica, sans-serif;;
+  font-family: rwe-medium, Arial, Helvetica, sans-serif;
   color: #00a19f;
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@
 }
 
 .press-releases .press-release-date strong {
-  font-family: rwe-bold;
+  font-family: rwe-bold, Arial, Helvetica, sans-serif;
   font-size: 38px;
   line-height: 38px;
 }

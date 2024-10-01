@@ -1,0 +1,19 @@
+.subnav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  padding: 8px 0;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.subnav ul li {
+  display: flex;
+  flex: 1;
+}
+
+.subnav a.button {
+  width: 100%;
+  margin: 0;
+}

@@ -1,5 +1,4 @@
 import {
-  buildBlock,
   loadHeader,
   loadFooter,
   decorateButtons,
@@ -13,21 +12,6 @@ import {
   loadCSS,
   sampleRUM,
 } from './aem.js';
-
-/**
- * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
- */
-function buildHeroBlock(main) {
-  const h1 = main.querySelector('h1');
-  const picture = main.querySelector('picture');
-  // eslint-disable-next-line no-bitwise
-  if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
-    const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
-    main.prepend(section);
-  }
-}
 
 /**
  * load fonts.css and set a session storage flag
@@ -45,14 +29,40 @@ async function loadFonts() {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks(main) {
+function buildAutoBlocks() {
   try {
-    buildHeroBlock(main);
+    // auto bolocks here
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
   }
 }
+
+const customDecorateIcon = (main) => {
+  const fontIcons = [...main.querySelectorAll('.icon')]
+    .filter((el) => [...el.classList].find((className) => className.startsWith('icon-rwe')));
+
+  fontIcons.forEach((icon) => {
+    icon.classList.remove('icon');
+  });
+
+  decorateIcons(main);
+};
+
+const decorateVidoeBlocks = (main) => {
+  main.querySelectorAll('a[href$=".mp4"], a[href$=".mov"]').forEach((videoLink) => {
+    const videoEl = document.createElement('video');
+    videoEl.classList.add('video-block');
+    videoEl.setAttribute('controls', '');
+
+    const sourceEl = document.createElement('source');
+    sourceEl.src = videoLink.href;
+    sourceEl.type = 'video/mp4';
+
+    videoEl.appendChild(sourceEl);
+    videoLink.parentNode.replaceWith(videoEl);
+  });
+};
 
 /**
  * Decorates the main element.
@@ -62,10 +72,11 @@ function buildAutoBlocks(main) {
 export function decorateMain(main) {
   // hopefully forward compatible button decoration
   decorateButtons(main);
-  decorateIcons(main);
+  customDecorateIcon(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateVidoeBlocks(main);
 }
 
 /**

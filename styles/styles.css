@@ -12,71 +12,27 @@
 
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --white: #fff;
+  --text-color: #1d4477;
+  --body-font-family: "";
+  --font-size: 16px;
+  --link-color: #00b1eb;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 130px;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--white);
   color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
+  font-family: rwe-normal, sans-serif;
+  font-size: 15px;
   line-height: 1.6;
 }
 
@@ -100,24 +56,69 @@ footer .footer[data-block-status="loaded"] {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
+h3 {
+  font-family: rwe-bold, Arial, Helvetica, sans-serif;;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 0;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
+
+@media (width >= 1280px) {
+  h1 {
+    font-size: 68px;
+    line-height: 74px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h4,
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+p {
+  font-size: 15px;
+  line-height: 22px;
+  font-family: rwe-regular, sans-serif;
+  margin: 0;
+}
 
 p,
 dl,
@@ -158,6 +159,14 @@ a:any-link {
   color: var(--link-color);
   text-decoration: none;
   word-break: break-word;
+  text-align: center;
+  overflow: visible;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: rwe-regural, sans-serif;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 a:hover {
@@ -171,29 +180,31 @@ button {
   box-sizing: border-box;
   display: inline-block;
   max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
-  font-style: normal;
+  margin: 0 8px 0 0;
+  border: 2px solid rgb(0 161 159);
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-family: rwe-medium, sans-serif;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.25;
+  line-height: 18px;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  color: var(--white);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-decoration-color: var(--white);
+  background-color: rgb(0 161 159);
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: #3ed8c3;
+  border-color: #3ed8c3;
   cursor: pointer;
 }
 
@@ -233,7 +244,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: auto;
   padding: 0 24px;
 }
@@ -242,16 +253,101 @@ main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
-
 /* section metadata */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.background-grey {
+  background: rgb(232 232 228);
+  padding: 16px;
+}
+
+main .section.background-dark-blue {
+  background: #1d4477;
+}
+
+main .section.long-button .default-content-wrapper a.button {
+  width: 100%;
+}
+
+p strong {
+  font-family: rwe-bold, Arial, Helvetica, sans-serif;
+}
+
+.section.text-center .default-content-wrapper {
+  text-align: center;
+}
+
+.section.content-center .default-content-wrapper {
+  margin: auto;
+  width: max-content;
+}
+
+.section.margin-0 {
+  margin: 0;
+}
+
+/* icons */
+span[class^="icon-rwe"] {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: "RWE_Icon_Font";
+  font-size: 20px;
+}
+
+span.icon-rwe-menu::before {
+  content: "";
+}
+
+span.icon-rwe-talk::before {
+  content: "";
+}
+
+span.icon-rwe-apps::before {
+  content: "";
+}
+
+span.icon-rwe-globe::before {
+  content: "";
+}
+
+span.icon-rwe-search::before {
+  content: "";
+}
+
+span.icon-rwe-anchor-down::before {
+  content: "";
+}
+
+span.icon-rwe-anchor-right::before {
+  content: "";
+}
+
+span.icon-rwe-anchor-left::before {
+  content: "";
+}
+
+span.icon-rwe-eye::before {
+  content: "";
+}
+
+span.icon-rwe-arrow-right::before {
+  content: "";
+}
+
+.video-block {
+  width: 100%;
+}
+
+.top-line > :first-child::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #adafb1;
+  display: block;
+  margin-bottom: 16px;
+  margin-top: -16px;
 }

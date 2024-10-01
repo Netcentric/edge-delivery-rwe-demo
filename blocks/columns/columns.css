@@ -21,7 +21,7 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: unset;
     gap: 24px;
   }
@@ -30,4 +30,22 @@
     flex: 1;
     order: unset;
   }
+}
+
+.columns.offices h2 + h3 {
+  margin-top: 16px;
+}
+
+.columns.offices h3 + p {
+  margin-top: 0;
+}
+
+.columns.offices a:not(.button) {
+  display: flex;
+  align-items: center;
+}
+
+.columns.offices a:not(.button) span {
+  height: 16px;
+  width: 16px;
 }
